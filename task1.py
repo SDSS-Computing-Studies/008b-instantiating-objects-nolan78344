@@ -110,6 +110,8 @@ def command():
     if int(command) == 1:
         animal()
     elif int(command) == 2:
+        
+        #cycle through all the animals
         animal.Retrieve()
     elif int(command) == 3:
         exit()
