@@ -74,6 +74,8 @@ Shih-tzu is owned by Christy
 (10 points) 
 """
 
+pets = []
+
 class animal:
     typeanimal = None
     breed = None
@@ -81,24 +83,13 @@ class animal:
     owner = None
     birthdate = None
 
-    def NewPet(self):
+
+    def __init__(self):
         self.typeanimal = input("Type of animal? ")
         self.breed = input("Breed? ")
         self.name = input("Name? ")
         self.owner = input("Owner? ")  
         self.birthdate = input("Birthdate? ")
-
-    def command(self):
-        print("1. Enter a new pet")
-        print("2. Retrieve a pet")
-        print("3. Exit")
-        command = input("Choose a number(1-3):")
-        if int(command) == 1:
-            animal.NewPet()
-        elif int(command) == 2:
-            animal.Retrieve()
-        elif int(command) == 3:
-            exit()
 
     def Retrieve(self):
         x = ""
@@ -111,5 +102,17 @@ class animal:
             exit()
 
 
-animal.command()
+def command():
+    print("1. Enter a new pet")
+    print("2. Retrieve a pet")
+    print("3. Exit")
+    command = input("Choose a number(1-3):")
+    if int(command) == 1:
+        animal()
+    elif int(command) == 2:
+        animal.Retrieve()
+    elif int(command) == 3:
+        exit()
+
+command()
 
