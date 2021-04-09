@@ -81,14 +81,14 @@ class animal:
     owner = None
     birthdate = None
 
-    def NewPet():
+    def NewPet(self):
         self.typeanimal = input("Type of animal? ")
         self.breed = input("Breed? ")
         self.name = input("Name? ")
         self.owner = input("Owner? ")  
         self.birthdate = input("Birthdate? ")
 
-    def command():
+    def command(self):
         print("1. Enter a new pet")
         print("2. Retrieve a pet")
         print("3. Exit")
