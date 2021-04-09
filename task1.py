@@ -110,13 +110,6 @@ class animal:
             print("That is not a animal")
             exit()
 
-    def Do(self,command):   
-        if command == 1:
-            self.NewPet()
-        elif command == 2:
-            self.Retrieve()
-        elif command == 3:
-            exit()
 
 animal.command()
 
