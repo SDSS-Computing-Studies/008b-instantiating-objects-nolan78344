@@ -91,7 +91,6 @@ class animal:
         self.owner = input("Owner? ")  
         self.birthdate = input("Birthdate? ")
         self.displayPet()
-        command()
 #    def Retrieve(self):
 #        x = ""
 #        x = input("Which Pet?")
@@ -111,19 +110,20 @@ class animal:
 
 def command():
     customers = []
-    print("1. Enter a new pet")
-    print("2. Retrieve a pet")
-    print("3. Exit")
-    command = input("Choose a number(1-3):")
-    if int(command) == 1:
-        customers.append( animal() )
-    elif int(command) == 2:
-        x = input("Which Pet? ")
-        for i in customers:
-            if i.name == str(x):
-                print(i.name + "\n" + i.breed + " is owned by " + i.owner)
-                command()
-    elif int(command) == 3:
-        exit()
+    while True:
+        print("1. Enter a new pet")
+        print("2. Retrieve a pet")
+        print("3. Exit")
+        entry = input("Choose a number(1-3):")
+        if int(entry) == 1:
+            customers.append( animal() )
+        elif int(entry) == 2:
+            x = input("Which Pet? ")
+            for i in customers:
+                if i.name == str(x):
+                    print(i.name + "\n" + i.breed + " is owned by " + i.owner)
+        elif int(entry) == 3:
+            break
+    exit()
 
 command()
