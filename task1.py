@@ -90,7 +90,8 @@ class animal:
         self.name = input("Name? ")
         self.owner = input("Owner? ")  
         self.birthdate = input("Birthdate? ")
-
+        self.displayPet()
+        command()
     def Retrieve(self):
         x = ""
         x = input("Which Pet?")
@@ -100,7 +101,13 @@ class animal:
         else:
             print("That is not a animal")
             exit()
-
+    
+    def displayPet(self):
+        output = self.typeanimal + " " + self.breed + " " + self.name + " " + self.owner + " " + self.birthdate
+        outputLength = len(output)
+        print( outputLength * "=")
+        print( output)
+        print( outputLength * "=")
 
 def command():
     print("1. Enter a new pet")
@@ -110,11 +117,9 @@ def command():
     if int(command) == 1:
         animal()
     elif int(command) == 2:
-        
         #cycle through all the animals
         animal.Retrieve()
     elif int(command) == 3:
         exit()
 
 command()
-
